@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario | Tu-Super SpA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Tu-Super</h2>
+      <nav>
+        <ul>
+          <li><a href="#dashboard" class="nav-link active">Inventario</a></li>
+          <li><a href="#registro" class="nav-link">Registrar Producto</a></li>
+          <li><a href="#alertas" class="nav-link">Alertas</a></li>
+          <li><button id="toggleReportes" class="nav-link">Ver Productos</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>INVENTARIO</h1>
+        <p id="total-count">Productos registrados: 0</p>
+      </header>
+
+      <section id="registro" class="form-section">
+        <form id="productForm">
+            <p>Nombre del producto</p>
+          <input type="text" id="name" placeholder="Nombre del producto" required />
+          <p>Código producto</p>
+          <input type="text" id="sku" placeholder="SKU" required />
+          <p>Cantidad producto</p>
+          <input type="number" id="stock" placeholder="Cantidad" min="1" required />
+          <p>Fecha de expiración</p>
+          <input type="date" id="expiry" required />
+          <button type="submit">Registrar producto</button>
+        </form>
+        <div id="message" class="message"></div>
+      </section>
+
+      <section id="alertas" class="list-section">
+        <h2>Alertas</h2>
+        <ul id="alertList"></ul>
+      </section>
+
+      <section id="reportes" class="list-section hidden">
+        <h2>Productos Registrados</h2>
+        <input type="text" id="search" placeholder="Buscar por nombre o SKU..." />
+        <div class="sort-buttons">
+          <button id="sortName">Ordenar por nombre</button>
+          <button id="sortStock">Ordenar por stock</button>
+        </div>
+        <ul id="productList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

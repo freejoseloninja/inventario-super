@@ -1,0 +1,208 @@
+:root {
+    --primary: #004080;
+    --secondary: #00aaff;
+    --danger: #ff4c4c;
+    --warning: #ffaa00;
+    --bg: #f0f4f8;
+    --white: #ffffff;
+    --gray: #cccccc;
+    --text: #333333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+  }
+  
+  .sidebar nav ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar nav ul li a,
+  .sidebar nav ul li button {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .nav-link.active {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  header h1 {
+    color: var(--primary);
+  }
+  
+  .form-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+  }
+  
+  input[disabled] {
+    background-color: #eee;
+    color: #888;
+  }
+  
+  button {
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #008ecc;
+  }
+  
+  .message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .list-section {
+    margin-bottom: 30px;
+  }
+  
+  #productList,
+  #alertList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #productList li,
+  #alertList li {
+    background-color: var(--white);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--primary);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .delete-btn,
+  .edit-btn {
+    background-color: var(--danger);
+    color: var(--white);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: var(--secondary);
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0072b8;
+  }
+  
+  #search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .sort-buttons button {
+    padding: 8px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .sort-buttons button:hover {
+    background-color: #0066cc;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
